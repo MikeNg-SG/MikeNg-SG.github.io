@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Mike Nguyen | AI & Data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Mike (Quang Minh) Nguyen - AI graduate from UTS. RAG systems, NLP, computer vision and data analysis projects." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon solid fa-brain"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Mike Nguyen</h1>
+								<p>Data & AI enthusiast<br />
+								Bachelor of Artificial Intelligence - University of Technology Sydney<br />
+								Graduation: February 2026<br />
+								GPA: 6.06/7 | WAM: 79.81/100
+								</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Projects</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Hi, I'm Mike (Quang Minh Nguyen).</p>
+								<p>My interest in AI started in 2024, which led me to complete a Bachelor of Artificial Intelligence at the University of Technology Sydney.
+								After graduating, I kept developing my skills in NLP, focusing on large language models and RAG systems. I've also been building my data engineering knowledge through online courses, and putting it into practice by building the data pipelines behind my own projects.
+								Right now I'm interested in building agentic AI, meaning LLM systems that use tools and take multi-step actions. I'm looking for graduate and internship roles in AI, ML engineering, data engineering and data analytics in Sydney. You can see what I've built in Projects.</p>
+								<p>Currently, I'm looking for graduate and internship roles in AI, ML engineering and data analytics in Sydney. You can see what I've built in <a href="#work">Projects</a>.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Projects</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+
+								<h3>Financial RAG System</h3>
+								<p class="project-date"><em>September 2026</em></p>
+								<p>A question-answering system over SEC 10-K annual reports for Apple, Microsoft, Amazon and Google. You ask a question about a company's business or risks, and it answers with citations back to the filing.</p>
+								<ul>
+									<li>Pipeline: download filings, extract and clean text, split by report section (business, risk factors, MD&amp;A, financials), chunk, embed, store in Weaviate</li>
+									<li>Hybrid search (BM25 + dense vectors), then a cross-encoder reranks results before Claude generates the answer</li>
+									<li>Currently building an evaluation set of test questions with known answers to measure retrieval and answer quality</li>
+								</ul>
+								<p><b>Stack:</b> Python, Weaviate, sentence-transformers, Claude API, OpenAI API uv<br />
+								<a href="https://github.com/MikeNg-SG/financial-rag-system">View on GitHub</a></p>
+								<hr />
+
+								<h3>Privacy-Aware Multi-LLM Routing (Capstone)</h3>
+								<p class="project-date"><em>November 2025</em></p>
+								<p>Won the DroneShield Industry Award at the UTS AI Showcase 2025. The system routes user prompts to different LLMs depending on whether they contain sensitive personal information.</p>
+								<ul>
+									<li>My part: the PII detection component, a fine-tuned DistilBERT model doing token-level named entity recognition</li>
+									<li>95% recall, with 5 to 300 ms latency per request</li>
+									<li>Early data exploration showed heavy class imbalance, so we switched from a simple yes/no classifier to token-level tagging</li>
+								</ul>
+								<p><b>Stack:</b> Python, Hugging Face Transformers, DistilBERT, LangGraph, Streamlit<br />
+								<a href="https://github.com/Shimatsuda/multi-routing-llm">View on GitHub</a></p>
+								<hr />
+
+								<h3>Transfer Learning Benchmark: ResNet50 vs EfficientNetB0</h3>
+								<p class="project-date"><em>May 2025</em></p>
+								<p>Compared two ImageNet-pretrained CNNs on a 5-class footwear dataset (Ballet Flat, Boat, Brogue, Clog, Sneaker) of about 13,700 images from Kaggle. Both models were fully fine-tuned with the same classification head, augmentation, optimizer and training budget.</p>
+								<ul>
+									<li>ResNet50 reached 85.19% test accuracy, compared with 73.83% for EfficientNetB0</li>
+									<li>Per-class analysis showed the gap came mostly from two visually similar classes, Ballet Flat and Boat, where ResNet50's recall was about 30 points higher</li>
+									<li>EfficientNetB0 trained faster (~32 vs ~58 minutes) with about 6 times fewer parameters, but its validation performance was much less stable</li>
+								</ul>
+								<p><b>Stack:</b> Python, TensorFlow/Keras, Google Colab<br />
+								<a href="https://github.com/MikeNg-SG/shoes-classification-EfficientNetB0-Resnet50">View on GitHub</a></p>
+								<hr />
+
+							</article>
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>I studied AI at UTS and I'm now doing the ACS Professional Year (ICT stream), which includes an internship placement. If your team has a placement opportunity, I'd like to hear about it.</p>
+
+								<h3>Skills</h3>
+								<ul>
+									<li><b>Programming languages:</b> Python, SQL</li>
+									<li><b>Machine learning:</b> TensorFlow, Keras, scikit-learn, Hugging Face</li>
+									<li><b>LLMs and generative AI:</b> RAG, hybrid search, RAGAS, vector databases (Weaviate), prompt engineering, LangGraph, OpenAI API, Claude API</li>
+									<li><b>Data analytics and visualisation:</b> Excel, Power BI, IBM Cognos Analytics, pandas, NumPy</li>
+									<li><b>Databases:</b> MySQL</li>
+									<li><b>Tools:</b> Git, Jupyter, Google Colab, VS Code, Streamlit</li>
+								</ul>
+
+								<h3>Education and certificates</h3>
+								<ul>
+									<li>ACS Professional Year Program, ICT stream (in progress)</li>
+									<li>Bachelor of Artificial Intelligence, University of Technology Sydney (2026)</li>
+									<li>IBM Data Analyst Professional Certificate (2026)</li>
+									<li>DeepLearning.AI: Retrieval Augmented Generation (RAG)</li>
+								</ul>
+
+								<p>I speak English and Vietnamese.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<p>The easiest way to reach me is by email or LinkedIn.</p>
+								<ul class="actions stacked">
+									<li><a href="mailto:qu.minh.ng.280@gmail.com" class="button primary icon solid fa-envelope">qu.minh.ng.280@gmail.com</a></li>
+									<li><a href="https://www.linkedin.com/in/mikeqmnguyen" class="button icon brands fa-linkedin-in">LinkedIn</a></li>
+									<li><a href="https://github.com/MikeNg-SG" class="button icon brands fa-github">GitHub</a></li>
+								</ul>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/mikeqmnguyen" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/MikeNg-SG" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Mike Nguyen. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
